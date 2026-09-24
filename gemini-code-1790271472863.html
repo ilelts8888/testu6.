@@ -1,0 +1,1773 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Kiểm Tra Tiếng Anh Unit 6 - Ms Lê Hằng English</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Nunito', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(-45deg, #8854C0, #FDCB6E, #00C9A7, #FF7675, #6C5CE7);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            padding: 20px 10px 60px 10px;
+            color: #2d3436;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* SVG Background Patterns Overlay */
+        .bg-patterns {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.25;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><g fill="%23FFFFFF"><path d="M20 10l3 6 6 3-6 3-3 6-3-6-6-3 6-3z"/><circle cx="80" cy="30" r="8"/><path d="M100 80c0 5-5 10-10 10s-10-5-10-10 5-10 10-10 10 5 10 10z"/><path d="M30 90l5-10 10 5-5 10z"/><path d="M70 100l2 4 4 2-4 2-2 4-2-4-4-2 4-2z"/></g></svg>');
+            animation: floatPatterns 20s linear infinite;
+        }
+
+        @keyframes floatPatterns {
+            from { background-position: 0 0; }
+            to { background-position: 120px 240px; }
+        }
+
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header Style */
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .teacher-badge {
+            display: inline-block;
+            background: #ffffff;
+            color: #6C5CE7;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 800;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            margin-bottom: 10px;
+            border: 2px solid #6C5CE7;
+            transform: rotate(-1deg);
+        }
+
+        .main-title {
+            font-size: 26px;
+            font-weight: 900;
+            color: #ffffff;
+            text-shadow: 2px 3px 0px rgba(0,0,0,0.2);
+            margin-bottom: 12px;
+        }
+
+        /* Important Reminder Box */
+        .reminder-card {
+            background: #FFF9E6;
+            border: 3px solid #FFEAA7;
+            border-left: 8px solid #FDCB6E;
+            border-radius: 18px;
+            padding: 16px 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .reminder-title {
+            color: #D63031;
+            font-weight: 900;
+            font-size: 17px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .reminder-text {
+            color: #2d3436;
+            font-size: 14.5px;
+            line-height: 1.5;
+            font-weight: 700;
+        }
+
+        .reminder-highlight {
+            display: block;
+            margin-top: 8px;
+            color: #6C5CE7;
+            font-weight: 800;
+            font-style: italic;
+        }
+
+        /* Question Cards */
+        .question-card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 24px;
+            margin-bottom: 22px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+            border: 3px solid #F0F0F0;
+            transition: transform 0.2s ease;
+            position: relative;
+        }
+
+        .q-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 14px;
+            border-bottom: 2px dashed #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        .q-number {
+            background: #6C5CE7;
+            color: white;
+            font-weight: 800;
+            font-size: 14px;
+            padding: 4px 14px;
+            border-radius: 12px;
+            box-shadow: 0 3px 0 #4b38b3;
+        }
+
+        .q-type {
+            font-size: 12.5px;
+            font-weight: 700;
+            color: #b2bec3;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .q-text {
+            font-size: 17px;
+            font-weight: 700;
+            color: #2d3436;
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        .q-text u {
+            color: #e84393;
+            font-weight: 900;
+            text-decoration-color: #e84393;
+            text-decoration-thickness: 3px;
+            padding: 0 2px;
+        }
+
+        .q-text b {
+            color: #6C5CE7;
+            font-weight: 900;
+        }
+
+        /* Option Grid / Buttons */
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .opt-btn {
+            background: #F8F9FA;
+            border: 2px solid #E9ECEF;
+            border-bottom: 5px solid #DEE2E6;
+            border-radius: 18px;
+            padding: 13px 16px;
+            font-size: 15.5px;
+            font-weight: 700;
+            color: #495057;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            outline: none;
+            user-select: none;
+        }
+
+        .opt-btn:hover:not([disabled]) {
+            transform: translateY(-2px) scale(1.01);
+            background: #EDF2F7;
+            border-color: #CBD5E0;
+        }
+
+        .opt-btn:active:not([disabled]) {
+            transform: translateY(2px);
+            border-bottom-width: 2px;
+        }
+
+        .opt-prefix {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: #E2E8F0;
+            color: #4A5568;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        /* Correct & Wrong States */
+        .opt-btn.correct {
+            background: #E6F9F0 !important;
+            border-color: #00D26A !important;
+            border-bottom: 5px solid #00A852 !important;
+            color: #007A3D !important;
+        }
+        .opt-btn.correct .opt-prefix {
+            background: #00D26A !important;
+            color: white !important;
+        }
+
+        .opt-btn.wrong {
+            background: #FFEAEA !important;
+            border-color: #FF4757 !important;
+            border-bottom: 5px solid #D63031 !important;
+            color: #C0392B !important;
+            animation: shake 0.4s ease;
+        }
+        .opt-btn.wrong .opt-prefix {
+            background: #FF4757 !important;
+            color: white !important;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-6px); }
+            40%, 80% { transform: translateX(6px); }
+        }
+
+        /* Explanation Box */
+        .explanation-box {
+            display: none;
+            margin-top: 18px;
+            background: #F3F0FF;
+            border: 2px dashed #9B51E0;
+            border-radius: 18px;
+            padding: 16px 18px;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .explanation-box.show {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .exp-head {
+            font-weight: 900;
+            color: #6C5CE7;
+            font-size: 15px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .exp-section {
+            margin-bottom: 8px;
+            font-size: 14px;
+            line-height: 1.55;
+            color: #2d3436;
+        }
+
+        .exp-section strong {
+            color: #6C5CE7;
+        }
+
+        .exp-list {
+            margin-left: 12px;
+            list-style: none;
+        }
+
+        .exp-list li {
+            margin-bottom: 3px;
+            position: relative;
+            padding-left: 14px;
+        }
+
+        .exp-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #8854C0;
+            font-weight: bold;
+        }
+
+        /* Submit Bar & Modal */
+        .submit-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .submit-btn {
+            background: #00D26A;
+            color: white;
+            font-size: 20px;
+            font-weight: 900;
+            padding: 16px 45px;
+            border: none;
+            border-bottom: 6px solid #00A852;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(0, 210, 106, 0.4);
+            transition: all 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px) scale(1.03);
+            background: #00E676;
+        }
+
+        .submit-btn:active {
+            transform: translateY(3px);
+            border-bottom-width: 2px;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-card {
+            background: white;
+            border-radius: 28px;
+            max-width: 500px;
+            width: 100%;
+            padding: 30px 24px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            border: 4px solid #6C5CE7;
+            animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes popIn {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .modal-score {
+            font-size: 48px;
+            font-weight: 900;
+            color: #6C5CE7;
+            margin: 10px 0;
+        }
+
+        .modal-msg {
+            font-size: 16px;
+            font-weight: 700;
+            color: #2d3436;
+            line-height: 1.5;
+            margin-bottom: 24px;
+            background: #F8F9FA;
+            padding: 16px;
+            border-radius: 16px;
+            border-left: 5px solid #6C5CE7;
+        }
+
+        .close-modal-btn {
+            background: #6C5CE7;
+            color: white;
+            border: none;
+            border-bottom: 4px solid #4b38b3;
+            padding: 12px 30px;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-patterns"></div>
+    <canvas id="confetti-canvas"></canvas>
+
+    <div class="container">
+        <header>
+            <div class="teacher-badge">👩‍🏫 Giáo viên tạo: Ms Lê Hằng English</div>
+            <h1 class="main-title">🎯 BÀI KIỂM TRA TIẾNG ANH UNIT 6 TƯƠNG TÁC</h1>
+        </header>
+
+        <div class="reminder-card">
+            <div class="reminder-title">
+                <span>⚠️ LỜI NHẮC CỰC KỲ QUAN TRỌNG ⚠️</span>
+            </div>
+            <div class="reminder-text">
+                Chỉ có đọc kỹ giải thích ngay sau mỗi câu, sau đó ghi lại từ vựng/cấu trúc mới vào vở để học thì mới thực sự giỏi lên.<br>
+                Làm cho xong mà không đọc giải thích hay đọc qua loa không ghi chép thì chỉ tốn thời gian vô ích!
+                <span class="reminder-highlight">* Kéo tới đâu, làm tới đó! *</span>
+            </div>
+        </div>
+
+        <div id="quiz-container"></div>
+
+        <div class="submit-container">
+            <button class="submit-btn" onclick="submitQuiz()">NỘP BÀI THI 🚀</button>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="result-modal">
+        <div class="modal-card">
+            <div style="font-size: 50px;">🏆</div>
+            <h2 style="font-weight: 900; color:#2d3436;">KẾT QUẢ BÀI LÀM</h2>
+            <div class="modal-score" id="score-text">0 / 50</div>
+            <div class="modal-msg" id="comment-text">...</div>
+            <button class="close-modal-btn" onclick="closeModal()">ĐÓNG VÀ XEM LẠI BÀI 📝</button>
+        </div>
+    </div>
+
+    <script>
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        let audioCtx = null;
+
+        function initAudio() {
+            if (!audioCtx) audioCtx = new AudioContext();
+        }
+
+        function playSound(type) {
+            try {
+                initAudio();
+                if (audioCtx.state === 'suspended') audioCtx.resume();
+
+                if (type === 'correct') {
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(659.25, audioCtx.currentTime);
+                    osc.frequency.exponentialRampToValueAtTime(1318.51, audioCtx.currentTime + 0.3);
+                    gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.4);
+                    osc.connect(gain);
+                    gain.connect(audioCtx.destination);
+                    osc.start();
+                    osc.stop(audioCtx.currentTime + 0.4);
+                } else if (type === 'wrong') {
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+                    osc.type = 'sawtooth';
+                    osc.frequency.setValueAtTime(220, audioCtx.currentTime);
+                    osc.frequency.setValueAtTime(160, audioCtx.currentTime + 0.15);
+                    osc.frequency.setValueAtTime(110, audioCtx.currentTime + 0.3);
+                    gain.gain.setValueAtTime(0.25, audioCtx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.45);
+                    osc.connect(gain);
+                    gain.connect(audioCtx.destination);
+                    osc.start();
+                    osc.stop(audioCtx.currentTime + 0.45);
+                }
+            } catch (e) {
+                console.log("Audio waiting for user gesture", e);
+            }
+        }
+
+        const rawQuestions = [
+            // ERROR IDENTIFICATION
+            {
+                type: "ERROR IDENTIFICATION",
+                question: "1. Mr Redzic said he <u>would</u>(A) have to <u>employ</u>(B) more staff <u>if</u>(C) business <u>continue</u>(D) to grow.",
+                options: [
+                    { text: "would", correct: false },
+                    { text: "employ", correct: false },
+                    { text: "if", correct: false },
+                    { text: "continue", correct: true }
+                ],
+                explanation: {
+                    translation: "Ông Redzic nói rằng ông ấy sẽ phải tuyển thêm nhân viên nếu công việc kinh doanh tiếp tục phát triển.",
+                    optionsDict: [
+                        "A. would (Đúng)",
+                        "B. employ (Đúng)",
+                        "C. if (Đúng)",
+                        "D. continue -> Sửa thành 'continued' (Lùi thì trong câu tường thuật / ĐK loại 2)"
+                    ],
+                    whyCorrect: "Trong câu tường thuật (Reported Speech) kết hợp Điều kiện loại 2, vế chính dùng 'would have to' thì vế 'if' phải lùi về Quá khứ đơn (`continued`).",
+                    whyIncorrect: "A, B, C chia đúng ngữ pháp."
+                }
+            },
+            {
+                type: "ERROR IDENTIFICATION",
+                question: "2. People <u>who</u>(A) went <u>in work</u>(B) in <u>the crisis</u>(C) have taken a while <u>to</u>(D) find jobs again.",
+                options: [
+                    { text: "who", correct: false },
+                    { text: "in work", correct: true },
+                    { text: "the crisis", correct: false },
+                    { text: "to", correct: false }
+                ],
+                explanation: {
+                    translation: "Những người đi làm trong thời kỳ khủng hoảng đã mất một khoảng thời gian để tìm lại công việc.",
+                    optionsDict: [
+                        "A. who (Đúng)",
+                        "B. in work -> Sửa thành 'to work' (Cụm go to work = đi làm)",
+                        "C. the crisis (Đúng)",
+                        "D. to (Đúng)"
+                    ],
+                    whyCorrect: "Động từ 'went' đi với giới từ 'to' chỉ sự di chuyển đến chỗ làm (`went to work`). 'In work' có nghĩa là đang có việc làm, không đi với động từ 'go'.",
+                    whyIncorrect: "A, C, D sử dụng đúng chức năng ngữ pháp."
+                }
+            },
+            {
+                type: "ERROR IDENTIFICATION",
+                question: "3. <u>Many</u>(A) have had to <u>lay up</u>(B) workers, <u>have taken out</u>(C) loans or shut down for <u>lack of funds</u>(D).",
+                options: [
+                    { text: "Many", correct: false },
+                    { text: "lay up", correct: true },
+                    { text: "have taken out", correct: false },
+                    { text: "lack of funds", correct: false }
+                ],
+                explanation: {
+                    translation: "Nhiều công ty đã phải sa thải công nhân, vay vốn hoặc đóng cửa vì thiếu nguồn tài chính.",
+                    optionsDict: [
+                        "A. Many (Đúng)",
+                        "B. lay up -> Sửa thành 'lay off' (lay off workers = sa thải công nhân)",
+                        "C. have taken out (Đúng)",
+                        "D. lack of funds (Đúng)"
+                    ],
+                    whyCorrect: "Cụm động từ mang nghĩa sa thải bớt nhân công cắt giảm nhân sự là `lay off`. Trong khi `lay up` nghĩa là nằm dưỡng bệnh hoặc tạm dừng hoạt động phương tiện.",
+                    whyIncorrect: "A, C, D sử dụng chuẩn xác."
+                }
+            },
+            {
+                type: "ERROR IDENTIFICATION",
+                question: "4. <u>With</u>(A) house prices climbing <u>day in day</u>(B), I think we'll be able to <u>sell for</u>(C) the price we want in <u>a couple of months</u>(D).",
+                options: [
+                    { text: "With", correct: false },
+                    { text: "day in day", correct: true },
+                    { text: "sell for", correct: false },
+                    { text: "a couple of months", correct: false }
+                ],
+                explanation: {
+                    translation: "Với giá nhà tăng lên từng ngày, tôi nghĩ chúng ta sẽ có thể bán được mức giá mong muốn trong vài tháng tới.",
+                    optionsDict: [
+                        "A. With (Đúng)",
+                        "B. day in day -> Sửa thành 'day by day' (từng ngày một)",
+                        "C. sell for (Đúng)",
+                        "D. a couple of months (Đúng)"
+                    ],
+                    whyCorrect: "Thành ngữ diễn tả diễn biến tăng lên theo từng ngày là `day by day` hoặc `day in, day out`. Cụm 'day in day' sai cấu trúc.",
+                    whyIncorrect: "A, C, D sử dụng hợp lý."
+                }
+            },
+            {
+                type: "ERROR IDENTIFICATION",
+                question: "5. <u>Recent</u>(A) findings suggest that <u>being</u>(B) born too <u>early</u>(C) may have <u>lastly</u>(D) consequences.",
+                options: [
+                    { text: "Recent", correct: false },
+                    { text: "being", correct: false },
+                    { text: "early", correct: false },
+                    { text: "lastly", correct: true }
+                ],
+                explanation: {
+                    translation: "Các phát hiện gần đây cho thấy việc sinh thiếu tháng có thể gây ra những hậu quả kéo dài.",
+                    optionsDict: [
+                        "A. Recent (Đúng)",
+                        "B. being (Đúng)",
+                        "C. early (Đúng)",
+                        "D. lastly -> Sửa thành 'lasting' (adj: lâu dài, kéo dài)"
+                    ],
+                    whyCorrect: "Đứng trước danh từ 'consequences' cần một Tính từ bổ nghĩa `lasting` (hậu quả kéo dài). Trong khi 'lastly' là trạng từ chuyển ý mang nghĩa 'cuối cùng'.",
+                    whyIncorrect: "A, B, C sử dụng chính xác từ loại."
+                }
+            },
+
+            // COLLOCATIONS
+            {
+                type: "COLLOCATIONS",
+                question: "6. If that happens, I'll certainly be back telling you all about it in due ________.",
+                options: [
+                    { text: "plan", correct: false },
+                    { text: "direction", correct: false },
+                    { text: "course", correct: true },
+                    { text: "way", correct: false }
+                ],
+                explanation: {
+                    translation: "Nếu điều đó xảy ra, chắc chắn tôi sẽ quay lại kể cho bạn nghe mọi chuyện khi đến thời điểm thích hợp.",
+                    optionsDict: [
+                        "A. plan",
+                        "B. direction",
+                        "C. course (in due course = vào thời điểm thích hợp / theo trình tự)",
+                        "D. way"
+                    ],
+                    whyCorrect: "Cụm từ cố định: `in due course` = đúng thời điểm / theo trình tự thích hợp.",
+                    whyIncorrect: "A, B, D không ghép đi với 'in due' để tạo nét nghĩa này."
+                }
+            },
+            {
+                type: "COLLOCATIONS",
+                question: "7. When you start ________ your age—instead of like a five year-old—we'll let you use the car.",
+                options: [
+                    { text: "feeling", correct: false },
+                    { text: "performing", correct: false },
+                    { text: "doing", correct: false },
+                    { text: "acting", correct: true }
+                ],
+                explanation: {
+                    translation: "Khi nào cậu bắt đầu cư xử đúng độ tuổi của mình—thay vì như một đứa trẻ 5 tuổi—chúng tôi sẽ cho cậu dùng xe ô tô.",
+                    optionsDict: [
+                        "A. feeling",
+                        "B. performing",
+                        "C. doing",
+                        "D. acting (act your age = cư xử đúng tuổi)"
+                    ],
+                    whyCorrect: "Thành ngữ: `act one's age` = cư xử đúng đắn, chững chạc phù hợp với độ tuổi.",
+                    whyIncorrect: "A, B, C không ghép với 'your age' tạo idiom này."
+                }
+            },
+            {
+                type: "COLLOCATIONS",
+                question: "8. I will campaign for better out of ________ service emergency and dentistry services.",
+                options: [
+                    { text: "hours", correct: true },
+                    { text: "ages", correct: false },
+                    { text: "times", correct: false },
+                    { text: "dates", correct: false }
+                ],
+                explanation: {
+                    translation: "Tôi sẽ vận động cho dịch vụ cấp cứu và nha khoa ngoài giờ hành chính tốt hơn.",
+                    optionsDict: [
+                        "A. hours (out of hours = ngoài giờ làm việc/hành chính)",
+                        "B. ages",
+                        "C. times",
+                        "D. dates"
+                    ],
+                    whyCorrect: "Cụm cố định: `out of hours` = ngoài giờ làm việc quy định / ngoài giờ hành chính.",
+                    whyIncorrect: "B, C, D sai collocation."
+                }
+            },
+            {
+                type: "COLLOCATIONS",
+                question: "9. They've been happily married ________ and Bridges credits her for his success.",
+                options: [
+                    { text: "if ever", correct: false },
+                    { text: "ever since", correct: true },
+                    { text: "never again", correct: false },
+                    { text: "never ever", correct: false }
+                ],
+                explanation: {
+                    translation: "Họ đã sống hạnh phúc bên nhau kể từ đó đến nay và Bridges luôn ghi nhận công ơn của cô ấy đối với thành công của anh.",
+                    optionsDict: [
+                        "A. if ever",
+                        "B. ever since (kể từ thời điểm đó cho đến nay)",
+                        "C. never again",
+                        "D. never ever"
+                    ],
+                    whyCorrect: "`ever since` đứng ở cuối mệnh đề thì Hiện tại hoàn thành diễn tả sự việc kéo dài liên tục từ mốc đó đến hiện tại.",
+                    whyIncorrect: "A, C, D không dùng để nối thời gian từ quá khứ đến nay."
+                }
+            },
+            {
+                type: "COLLOCATIONS",
+                question: "10. It's important that the kids start ________ regular hours when they are young, since having unpredictable bedtimes can cause a lot of problems with sleep.",
+                options: [
+                    { text: "keeping", correct: true },
+                    { text: "making", correct: false },
+                    { text: "finding", correct: false },
+                    { text: "giving", correct: false }
+                ],
+                explanation: {
+                    translation: "Việc trẻ nhỏ bắt đầu duy trì giờ giấc sinh hoạt điều độ ngay từ khi còn bé là rất quan trọng, vì giờ đi ngủ thất thường có thể gây ra nhiều vấn đề về giấc ngủ.",
+                    optionsDict: [
+                        "A. keeping (keep regular hours = duy trì giờ giấc điều độ)",
+                        "B. making",
+                        "C. finding",
+                        "D. giving"
+                    ],
+                    whyCorrect: "Collocation: `keep regular hours` = duy trì lối sống/giờ giấc ngủ nghỉ sinh hoạt nề nếp, điều độ.",
+                    whyIncorrect: "B, C, D không tạo thành cụm từ chỉ thói quen nề nếp sinh hoạt."
+                }
+            },
+            {
+                type: "COLLOCATIONS",
+                question: "11. The ________ is based in Folkestone with an editorial office in London.",
+                options: [
+                    { text: "office holder", correct: false },
+                    { text: "head office", correct: true },
+                    { text: "building society", correct: false },
+                    { text: "concert hall", correct: false }
+                ],
+                explanation: {
+                    translation: "Trụ sở chính được đặt tại Folkestone với một văn phòng tòa soạn ở Luân Đôn.",
+                    optionsDict: [
+                        "A. office holder (người đảm nhiệm chức vụ)",
+                        "B. head office (n: trụ sở chính/trụ sở điều hành)",
+                        "C. building society (hiệp hội tiết kiệm)",
+                        "D. concert hall (phòng hòa nhạc)"
+                    ],
+                    whyCorrect: "Cụm danh từ: `head office` = trụ sở chính của công ty/tổ chức.",
+                    whyIncorrect: "A, C, D không phù hợp với văn phòng tòa soạn báo."
+                }
+            },
+            {
+                type: "COLLOCATIONS",
+                question: "12. ________ is always 30 days longer, and so can have 383, 384, or 385 days.",
+                options: [
+                    { text: "A leap year", correct: true },
+                    { text: "A decade", correct: false },
+                    { text: "Fortnight", correct: false },
+                    { text: "A century", correct: false }
+                ],
+                explanation: {
+                    translation: "Năm nhuận (âm lịch) luôn dài hơn 30 ngày, và do đó có thể có 383, 384 hoặc 385 ngày.",
+                    optionsDict: [
+                        "A. A leap year (n: năm nhuận)",
+                        "B. A decade (n: thập kỷ = 10 năm)",
+                        "C. Fortnight (n: 2 tuần)",
+                        "D. A century (n: thế kỷ = 100 năm)"
+                    ],
+                    whyCorrect: "`A leap year` = năm nhuận (theo âm lịch thêm một tháng nhuận 30 ngày nên có 383-385 ngày).",
+                    whyIncorrect: "B, C, D không phải mốc số ngày năm nhuận."
+                }
+            },
+            {
+                type: "COLLOCATIONS",
+                question: "13. When do you think the doctor will call with my test results? I've been waiting for hours ________ end.",
+                options: [
+                    { text: "in", correct: false },
+                    { text: "at", correct: false },
+                    { text: "from", correct: false },
+                    { text: "on", correct: true }
+                ],
+                explanation: {
+                    translation: "Bạn nghĩ khi nào bác sĩ sẽ gọi điện báo kết quả xét nghiệm cho tôi? Tôi đã chờ đợi liên tục nhiều giờ liền rồi.",
+                    optionsDict: [
+                        "A. in",
+                        "B. at",
+                        "C. from",
+                        "D. on (for hours on end = liên tục nhiều giờ liền)"
+                    ],
+                    whyCorrect: "Thành ngữ: `for hours on end` = liên tục nhiều giờ không ngừng nghỉ.",
+                    whyIncorrect: "A, B, C sai giới từ trong idiom."
+                }
+            },
+            {
+                type: "COLLOCATIONS",
+                question: "14. Now with the amount of traffic on the road, ________ mistake can be fatal.",
+                options: [
+                    { text: "any moment now", correct: false },
+                    { text: "a millennium ago", correct: false },
+                    { text: "a split-second", correct: true },
+                    { text: "rush hours", correct: false }
+                ],
+                explanation: {
+                    translation: "Bây giờ với lưu lượng giao thông đông đúc trên đường, một sai lầm trong tích tắc cũng có thể gây tử vong.",
+                    optionsDict: [
+                        "A. any moment now (ngay bây giờ)",
+                        "B. a millennium ago (cách đây một thiên niên kỷ)",
+                        "C. a split-second (a split-second mistake = một sai sót trong tích tắc)",
+                        "D. rush hours (giờ cao điểm)"
+                    ],
+                    whyCorrect: "Cụm tính từ/danh từ ghép: `a split-second mistake` = một sai lầm xảy ra trong khoảng thời gian cực ngắn/tích tắc.",
+                    whyIncorrect: "A, B, D không đi với 'mistake' chỉ thời gian tích tắc gây ra tai nạn."
+                }
+            },
+            {
+                type: "COLLOCATIONS",
+                question: "15. After a ________ off yesterday, the Phillies return to the field for a workout today.",
+                options: [
+                    { text: "day", correct: true },
+                    { text: "year", correct: false },
+                    { text: "month", correct: false },
+                    { text: "week", correct: false }
+                ],
+                explanation: {
+                    translation: "Sau một ngày nghỉ vào hôm qua, đội Phillies đã trở lại sân tập hôm nay.",
+                    optionsDict: [
+                        "A. day (a day off = một ngày nghỉ)",
+                        "B. year",
+                        "C. month",
+                        "D. week"
+                    ],
+                    whyCorrect: "Cụm từ thông dụng: `a day off` = một ngày nghỉ làm/nghỉ tập.",
+                    whyIncorrect: "B, C, D mâu thuẫn với ngữ cảnh 'yesterday... return today' (ngày nghỉ)."
+                }
+            },
+            {
+                type: "COLLOCATIONS",
+                question: "16. Candidates begin filing to run for ________ next Monday in a whole different world.",
+                options: [
+                    { text: "it", correct: false },
+                    { text: "life", correct: false },
+                    { text: "office", correct: true },
+                    { text: "time", correct: false }
+                ],
+                explanation: {
+                    translation: "Các ứng cử viên bắt đầu nộp hồ sơ ra tranh cử chức vụ vào Thứ Hai tuần tới trong một diện mạo hoàn toàn mới.",
+                    optionsDict: [
+                        "A. it",
+                        "B. life",
+                        "C. office (run for office = ra tranh cử chức vụ công)",
+                        "D. time"
+                    ],
+                    whyCorrect: "Cụm từ cố định: `run for office` = nộp hồ sơ ra tranh cử một chức vụ chính trị/công quyền.",
+                    whyIncorrect: "A, B, D không ghép đi với 'run for'."
+                }
+            },
+            {
+                type: "COLLOCATIONS",
+                question: "17. Our new boss is a real piece of ________. Remind me to stay out of her way!",
+                options: [
+                    { text: "career", correct: false },
+                    { text: "advice", correct: false },
+                    { text: "art", correct: false },
+                    { text: "work", correct: true }
+                ],
+                explanation: {
+                    translation: "Sếp mới của chúng ta thực sự là một người rất khó ghê gớm. Hãy nhắc tôi tránh xa cô ấy ra!",
+                    optionsDict: [
+                        "A. career",
+                        "B. advice",
+                        "C. art",
+                        "D. work (a real piece of work = người ghê gớm, quái đản, khó chịu)"
+                    ],
+                    whyCorrect: "Thành ngữ: `a piece of work` = một người cực kỳ khó tính, ghê gớm hoặc quái đản khó đối phó.",
+                    whyIncorrect: "A, B, C không tạo thành thành ngữ chỉ tính cách con người."
+                }
+            },
+            {
+                type: "COLLOCATIONS",
+                question: "18. All topics remaining on the list are to be completed in a reasonable ________.",
+                options: [
+                    { text: "time zone", correct: false },
+                    { text: "spare time", correct: false },
+                    { text: "term time", correct: false },
+                    { text: "time frame", correct: true }
+                ],
+                explanation: {
+                    translation: "Tất cả các chủ đề còn lại trong danh sách cần phải được hoàn thành trong một khung thời gian hợp lý.",
+                    optionsDict: [
+                        "A. time zone (múi giờ)",
+                        "B. spare time (thời gian rảnh)",
+                        "C. term time (thời gian học kỳ)",
+                        "D. time frame (n: khung thời gian/thời hạn)"
+                    ],
+                    whyCorrect: "Cụm danh từ: `time frame` = khung thời gian hoặc khoảng thời gian ấn định để hoàn thành việc gì.",
+                    whyIncorrect: "A, B, C không chỉ khoảng thời gian ấn định cho nhiệm vụ."
+                }
+            },
+
+            // VOCABULARY IN CONTRAST
+            {
+                type: "VOCABULARY IN CONTRAST",
+                question: "19. His contract will ________ at a time when the team recognizes it must get younger.",
+                options: [
+                    { text: "begin", correct: false },
+                    { text: "expire", correct: true },
+                    { text: "create", correct: false },
+                    { text: "postpone", correct: false }
+                ],
+                explanation: {
+                    translation: "Hợp đồng của anh ấy sẽ hết hạn vào thời điểm đội bóng nhận ra rằng họ phải trẻ hóa đội hình.",
+                    optionsDict: [
+                        "A. begin (bắt đầu)",
+                        "B. expire (v: hết hạn, đáo hạn hợp đồng)",
+                        "C. create (tạo ra)",
+                        "D. postpone (hoãn lại)"
+                    ],
+                    whyCorrect: "Động từ 'expire' dùng cho hợp đồng/giấy tờ đáo hạn/hết hiệu lực.",
+                    whyIncorrect: "A, C, D không đi với ngữ cảnh hợp đồng kết thúc để trẻ hóa đội bóng."
+                }
+            },
+            {
+                type: "VOCABULARY IN CONTRAST",
+                question: "20. ________ research from the group focused on delivering stem cells intrabronchial.",
+                options: [
+                    { text: "Prior", correct: true },
+                    { text: "Timely", correct: false },
+                    { text: "Overdue", correct: false },
+                    { text: "Eternal", correct: false }
+                ],
+                explanation: {
+                    translation: "Nghiên cứu trước đây từ nhóm tập trung vào việc đưa tế bào gốc vào trong phế quản.",
+                    optionsDict: [
+                        "A. Prior (adj: trước đó, prior research = nghiên cứu trước đây)",
+                        "B. Timely (kịp thời)",
+                        "C. Overdue (quá hạn)",
+                        "D. Eternal (vĩnh cửu)"
+                    ],
+                    whyCorrect: "Tính từ `Prior` đứng trước danh từ 'research' nghĩa là các nghiên cứu đã thực hiện trước đó.",
+                    whyIncorrect: "B, C, D sai nét nghĩa miêu tả lịch sử nghiên cứu."
+                }
+            },
+            {
+                type: "VOCABULARY IN CONTRAST",
+                question: "21. A close friend or ________ will offer you a chance to work as their apprentice.",
+                options: [
+                    { text: "competitor", correct: false },
+                    { text: "pen-friend", correct: false },
+                    { text: "colleague", correct: true },
+                    { text: "recruit", correct: false }
+                ],
+                explanation: {
+                    translation: "Một người bạn thân hoặc đồng nghiệp sẽ mang đến cho bạn cơ hội làm học việc cho họ.",
+                    optionsDict: [
+                        "A. competitor (n: đối thủ cạnh tranh)",
+                        "B. pen-friend (n: bạn qua thư)",
+                        "C. colleague (n: đồng nghiệp)",
+                        "D. recruit (n: tân binh/lính mới)"
+                    ],
+                    whyCorrect: "'colleague' = đồng nghiệp làm cùng lĩnh vực/công ty.",
+                    whyIncorrect: "A là đối thủ; B bạn qua thư; D tân binh không phải đối tượng trao cơ hội nghề nghiệp."
+                }
+            },
+            {
+                type: "VOCABULARY IN CONTRAST",
+                question: "22. Following the incident, Waddle wrote a book and became a ________ and speaker.",
+                options: [
+                    { text: "cashier", correct: false },
+                    { text: "artist", correct: false },
+                    { text: "consultant", correct: true },
+                    { text: "reporter", correct: false }
+                ],
+                explanation: {
+                    translation: "Sau sự cố đó, Waddle đã viết một cuốn sách và trở thành một cố vấn/chuyên gia tư vấn và diễn giả.",
+                    optionsDict: [
+                        "A. cashier (n: thu ngân)",
+                        "B. artist (n: nghệ sĩ)",
+                        "C. consultant (n: chuyên gia tư vấn / cố vấn)",
+                        "D. reporter (n: phóng viên)"
+                    ],
+                    whyCorrect: "'consultant and speaker' = cố vấn kiêm diễn giả chuyên nghiệp.",
+                    whyIncorrect: "A, B, D không đi sóng đôi với danh từ chỉ diễn giả chuyên môn 'speaker'."
+                }
+            },
+            {
+                type: "VOCABULARY IN CONTRAST",
+                question: "23. As you step into the air-conditioned office, there is an ________ change in temperature.",
+                options: [
+                    { text: "abrupt", correct: true },
+                    { text: "gradual", correct: false },
+                    { text: "slow", correct: false },
+                    { text: "steady", correct: false }
+                ],
+                explanation: {
+                    translation: "Khi bạn bước vào văn phòng có máy điều hòa, có sự thay đổi nhiệt độ đột ngột.",
+                    optionsDict: [
+                        "A. abrupt (adj: đột ngột, đột ngột thay đổi)",
+                        "B. gradual (adj: từ từ, dần dần)",
+                        "C. slow (adj: chậm)",
+                        "D. steady (adj: đều đặn)"
+                    ],
+                    whyCorrect: "Việc bước từ ngoài vào phòng máy lạnh gây ra sự thay đổi nhiệt độ tức thì, đột ngột -> dùng tính từ `abrupt`.",
+                    whyIncorrect: "B, C, D mang nghĩa từ từ, đều đặn ngược ngữ cảnh."
+                }
+            },
+            {
+                type: "VOCABULARY IN CONTRAST",
+                question: "24. Moyes will leave in the summer and we should ________ an attack-minded young coach from the continent.",
+                options: [
+                    { text: "discover", correct: false },
+                    { text: "register", correct: false },
+                    { text: "headhunt", correct: true },
+                    { text: "notice", correct: false }
+                ],
+                explanation: {
+                    translation: "Moyes sẽ ra đi vào mùa hè và chúng ta nên chiêu mộ / săn tìm một huấn luyện viên trẻ có thiên hướng tấn công từ lục địa.",
+                    optionsDict: [
+                        "A. discover (phát hiện)",
+                        "B. register (đăng ký)",
+                        "C. headhunt (v: săn nhân tài / chiêu mộ chuyên gia giỏi)",
+                        "D. notice (chú ý)"
+                    ],
+                    whyCorrect: "Động từ 'headhunt' dùng cho việc chủ động tìm kiếm và chiêu mộ nhân sự tài năng nổi bật.",
+                    whyIncorrect: "A, B, D không chỉ hành động chiêu mộ HLV giỏi."
+                }
+            },
+            {
+                type: "VOCABULARY IN CONTRAST",
+                question: "25. When the ________ started, this company immediately cut overtime, said president Martin.",
+                options: [
+                    { text: "march", correct: false },
+                    { text: "invasion", correct: false },
+                    { text: "recruitment", correct: false },
+                    { text: "strike", correct: true }
+                ],
+                explanation: {
+                    translation: "Khi cuộc đình công bắt đầu, công ty này ngay lập tức cắt giảm giờ làm thêm, chủ tịch Martin cho biết.",
+                    optionsDict: [
+                        "A. march (n: cuộc diễu hành)",
+                        "B. invasion (n: sự xâm lược)",
+                        "C. recruitment (n: sự tuyển dụng)",
+                        "D. strike (n: cuộc đình công/bãi công)"
+                    ],
+                    whyCorrect: "'strike' = cuộc đình công của công nhân dẫn đến việc cắt giảm giờ làm."
+                }
+            },
+            {
+                type: "VOCABULARY IN CONTRAST",
+                question: "26. The president's speech heralds a new ________ in foreign policy.",
+                options: [
+                    { text: "interval", correct: false },
+                    { text: "era", correct: true },
+                    { text: "century", correct: false },
+                    { text: "history", correct: false }
+                ],
+                explanation: {
+                    translation: "Bài phát biểu của tổng thống báo hiệu một kỷ nguyên mới trong chính sách đối ngoại.",
+                    optionsDict: [
+                        "A. interval (n: khoảng nghỉ)",
+                        "B. era (n: kỷ nguyên/thời đại mới)",
+                        "C. century (n: thế kỷ 100 năm)",
+                        "D. history (n: lịch sử)"
+                    ],
+                    whyCorrect: "Cụm từ: `herald a new era` = mở ra/báo hiệu một kỷ nguyên mới.",
+                    whyIncorrect: "A, C, D không đi với động từ 'herald'."
+                }
+            },
+
+            // PHRASAL VERBS
+            {
+                type: "PHRASAL VERBS",
+                question: "27. We ________ the afternoon with a walk around the garden.",
+                options: [
+                    { text: "sent away", correct: false },
+                    { text: "whiled away", correct: true },
+                    { text: "kept away", correct: false },
+                    { text: "right away", correct: false }
+                ],
+                explanation: {
+                    translation: "Chúng tôi đã thong thả tiêu thời gian buổi chiều bằng việc đi dạo quanh vườn.",
+                    optionsDict: [
+                        "A. sent away (gửi đi)",
+                        "B. whiled away (while away = thong thả tiêu thời gian / giết thời gian thoải mái)",
+                        "C. kept away (tránh xa)",
+                        "D. right away (ngay lập tức)"
+                    ],
+                    whyCorrect: "`while away the afternoon/time` = tiêu tốn thời gian một cách êm đềm, thư thái.",
+                    whyIncorrect: "A, C, D sai nghĩa cụm động từ."
+                }
+            },
+            {
+                type: "PHRASAL VERBS",
+                question: "28. For the youngest, the costs of raising families and paying mortgages ________.",
+                options: [
+                    { text: "go ahead", correct: false },
+                    { text: "put off", correct: false },
+                    { text: "lie ahead", correct: true },
+                    { text: "cut back", correct: false }
+                ],
+                explanation: {
+                    translation: "Đối với những người trẻ nhất, chi phí nuôi gia đình và trả tiền thế chấp nhà đang ở ngay phía trước.",
+                    optionsDict: [
+                        "A. go ahead (tiến hành)",
+                        "B. put off (trì hoãn)",
+                        "C. lie ahead (nằm ở phía trước / đang chờ đợi ở tương lai)",
+                        "D. cut back (cắt giảm)"
+                    ],
+                    whyCorrect: "`lie ahead` = những khó khăn/chi phí đang đợi sẵn ở tương lai phía trước.",
+                    whyIncorrect: "A, B, D không mô tả trách nhiệm tài chính trong tương lai."
+                }
+            },
+            {
+                type: "PHRASAL VERBS",
+                question: "29. She ________ with the aim of becoming the youngest ever winner of the championship.",
+                options: [
+                    { text: "set out", correct: true },
+                    { text: "act out", correct: false },
+                    { text: "brought out", correct: false },
+                    { text: "put out", correct: false }
+                ],
+                explanation: {
+                    translation: "Cô ấy đã lên đường/bắt đầu hành trình với mục tiêu trở thành nhà vô địch trẻ tuổi nhất trong lịch sử.",
+                    optionsDict: [
+                        "A. set out (set out with the aim of = bắt đầu hành trình với mục tiêu)",
+                        "B. act out (diễn lại vở kịch)",
+                        "C. brought out (phát hành)",
+                        "D. put out (dập tắt)"
+                    ],
+                    whyCorrect: "`set out` đi với 'with the aim of' nghĩa là khởi đầu thực hiện một kế hoạch lớn.",
+                    whyIncorrect: "B, C, D không dùng cho việc bắt đầu mục tiêu sự nghiệp."
+                }
+            },
+            {
+                type: "PHRASAL VERBS",
+                question: "30. Even the giant Microsoft just last week announced plans to ________ 5,000 people.",
+                options: [
+                    { text: "lay off", correct: true },
+                    { text: "carry off", correct: false },
+                    { text: "come off", correct: false },
+                    { text: "drop off", correct: false }
+                ],
+                explanation: {
+                    translation: "Ngay cả gã khổng lồ Microsoft tuần trước cũng đã thông báo kế hoạch sa thải 5.000 người.",
+                    optionsDict: [
+                        "A. lay off (v: sa thải nhân công)",
+                        "B. carry off (thành công rực rỡ)",
+                        "C. come off (bong ra / thành công)",
+                        "D. drop off (thả ai xuống xe / ngủ gật)"
+                    ],
+                    whyCorrect: "`lay off people` = sa thải nhân viên cắt giảm nhân sự.",
+                    whyIncorrect: "B, C, D sai nghĩa sa thải."
+                }
+            },
+            {
+                type: "PHRASAL VERBS",
+                question: "31. You have to learn to deal with difficult situations when they ________.",
+                options: [
+                    { text: "end up", correct: false },
+                    { text: "stay up", correct: false },
+                    { text: "crop up", correct: true },
+                    { text: "get off", correct: false }
+                ],
+                explanation: {
+                    translation: "Bạn phải học cách đối mặt với những tình huống khó khăn khi chúng đột ngột nảy sinh.",
+                    optionsDict: [
+                        "A. end up (kết thúc)",
+                        "B. stay up (thức khuya)",
+                        "C. crop up (v: đột ngột nảy sinh / xuất hiện bất ngờ)",
+                        "D. get off (xuống xe)"
+                    ],
+                    whyCorrect: "`crop up` = bất ngờ xuất hiện/nảy sinh (vấn đề, tình huống).",
+                    whyIncorrect: "A, B, D sai nét nghĩa nảy sinh vấn đề."
+                }
+            },
+            {
+                type: "PHRASAL VERBS",
+                question: "32. Since the hurricane, builders and roofers have been ________ with work.",
+                options: [
+                    { text: "snowed under", correct: true },
+                    { text: "gave up", correct: false },
+                    { text: "drew back", correct: false },
+                    { text: "kept under", correct: false }
+                ],
+                explanation: {
+                    translation: "Kể từ sau trận bão tuyết/cuồng phong, thợ xây và thợ lợp mái nhà đã ngập đầu trong công việc.",
+                    optionsDict: [
+                        "A. snowed under (be snowed under with work = ngập đầu ngập cổ trong công việc)",
+                        "B. gave up (bỏ cuộc)",
+                        "C. drew back (rút lui)",
+                        "D. kept under (đàn áp)"
+                    ],
+                    whyCorrect: "Thành ngữ/Phrasal verb: `be snowed under with work` = quá bận rộn vì công việc ngập đầu.",
+                    whyIncorrect: "B, C, D sai nét nghĩa bận rộn."
+                }
+            },
+            {
+                type: "PHRASAL VERBS",
+                question: "33. We decided to ________ the project despite our manager's departure.",
+                options: [
+                    { text: "catch up with", correct: false },
+                    { text: "come out with", correct: false },
+                    { text: "press ahead with", correct: true },
+                    { text: "move in with", correct: false }
+                ],
+                explanation: {
+                    translation: "Chúng tôi quyết định tiếp tục thúc đẩy tiến độ dự án bất chấp sự ra đi của quản lý.",
+                    optionsDict: [
+                        "A. catch up with (theo kịp ai)",
+                        "B. come out with (tung ra sản phẩm)",
+                        "C. press ahead with (v: quyết tâm kiên trì thúc đẩy dự án/kế hoạch)",
+                        "D. move in with (duy chuyển đến sống cùng)"
+                    ],
+                    whyCorrect: "`press ahead/forward with sth` = kiên trì tiếp tục thực hiện dự án dù gặp trở ngại.",
+                    whyIncorrect: "A, B, D sai ngữ nghĩa thúc đẩy công việc."
+                }
+            },
+            {
+                type: "PHRASAL VERBS",
+                question: "34. They're travelling across Europe by train and are planning to ________ in Moscow.",
+                options: [
+                    { text: "keep up", correct: false },
+                    { text: "speed up", correct: false },
+                    { text: "pay up", correct: false },
+                    { text: "end up", correct: true }
+                ],
+                explanation: {
+                    translation: "Họ đang đi du lịch khắp châu Âu bằng tàu hỏa và dự định dừng lại/kết thúc chuyến đi ở Mát-xcơ-va.",
+                    optionsDict: [
+                        "A. keep up (giữ vững)",
+                        "B. speed up (tăng tốc)",
+                        "C. pay up (trả hết nợ)",
+                        "D. end up (end up in = dừng lại / kết thúc ở địa điểm nào)"
+                    ],
+                    whyCorrect: "`end up in + địa danh` = dừng chân/kết thúc hành trình ở đâu.",
+                    whyIncorrect: "A, B, C sai nghĩa di chuyển du lịch."
+                }
+            },
+
+            // SYNONYM
+            {
+                type: "SYNONYM",
+                question: "35. 'We haven't done very well, have we?' - '<b>Never mind</b>. At least we tried.'",
+                options: [
+                    { text: "ignore it", correct: true },
+                    { text: "make it", correct: false },
+                    { text: "move it", correct: false },
+                    { text: "take it", correct: false }
+                ],
+                explanation: {
+                    translation: "'Chúng ta làm không tốt lắm phải không?' - 'Đừng bận tâm / Bỏ qua đi. Dù sao chúng ta cũng đã cố gắng rồi.'",
+                    optionsDict: [
+                        "A. ignore it (Bỏ qua đi / Đừng bận tâm)",
+                        "B. make it (thành công)",
+                        "C. move it (di chuyển)",
+                        "D. take it (đón nhận)"
+                    ],
+                    whyCorrect: "Từ đồng nghĩa: `Never mind = ignore it` (đừng bận tâm, hãy bỏ qua điều đó).",
+                    whyIncorrect: "B, C, D không mang nghĩa an ủi bỏ qua."
+                }
+            },
+            {
+                type: "SYNONYM",
+                question: "36. He was <b>going on and on</b> in his speech about safety at reasonable cost.",
+                options: [
+                    { text: "carrying on", correct: true },
+                    { text: "calling on", correct: false },
+                    { text: "carrying off", correct: false },
+                    { text: "looking on", correct: false }
+                ],
+                explanation: {
+                    translation: "Anh ấy cứ nói liên tục không ngừng trong bài phát biểu về an toàn với chi phí hợp lý.",
+                    optionsDict: [
+                        "A. carrying on (carrying on talking = nói liên tục không ngừng)",
+                        "B. calling on (ghé thăm)",
+                        "C. carrying off (đoạt giải)",
+                        "D. looking on (đứng nhìn)"
+                    ],
+                    whyCorrect: "Từ đồng nghĩa: `go on and on = carry on` (tiếp tục nói dông dài không ngừng).",
+                    whyIncorrect: "B, C, D sai nghĩa đồng nghĩa."
+                }
+            },
+            {
+                type: "SYNONYM",
+                question: "37. The new techniques <b>work a treat</b>, typically increasing memory span by around 15 per cent over a training course of five weeks.",
+                options: [
+                    { text: "suitable", correct: false },
+                    { text: "competitive", correct: false },
+                    { text: "expressive", correct: false },
+                    { text: "effective", correct: true }
+                ],
+                explanation: {
+                    translation: "Các kỹ thuật mới hoạt động rất hiệu quả, điển hình là làm tăng dung lượng trí nhớ lên khoảng 15% sau khóa huấn luyện 5 tuần.",
+                    optionsDict: [
+                        "A. suitable (phù hợp)",
+                        "B. competitive (cạnh tranh)",
+                        "C. expressive (diễn cảm)",
+                        "D. effective (adj: có hiệu quả cao / vô cùng hiệu nghiệm)"
+                    ],
+                    whyCorrect: "Thành ngữ: `work a treat = be very effective` (mang lại hiệu quả rất tốt/thành công rực rỡ).",
+                    whyIncorrect: "A, B, C không phản ánh hiệu quả thành công."
+                }
+            },
+            {
+                type: "SYNONYM",
+                question: "38. There will be exercises that you can't do at first. You will get to them <b>all in good time</b>.",
+                options: [
+                    { text: "peacefully", correct: false },
+                    { text: "calmly", correct: true },
+                    { text: "quietly", correct: false },
+                    { text: "loudly", correct: false }
+                ],
+                explanation: {
+                    translation: "Sẽ có những bài tập mà ban đầu bạn không thể làm được. Rồi bạn sẽ làm được chúng một cách bình tĩnh/từ tốn khi đến thời điểm thích hợp.",
+                    optionsDict: [
+                        "A. peacefully (yên bình)",
+                        "B. calmly (adv: bình tĩnh, kiên nhẫn từ tốn)",
+                        "C. quietly (lặng lẽ)",
+                        "D. loudly (ầm ĩ)"
+                    ],
+                    whyCorrect: "Cụm từ: `all in good time` = kiên nhẫn, bình tĩnh rồi thời điểm thích hợp sẽ tới (~ calmly / patiently).",
+                    whyIncorrect: "A, C, D không mang nghĩa kiên nhẫn từ tốn."
+                }
+            },
+            {
+                type: "SYNONYM",
+                question: "39. And now for <b>the moment of truth</b>: who is this year's winner?",
+                options: [
+                    { text: "first moment", correct: false },
+                    { text: "decisive moment", correct: true },
+                    { text: "memorable moment", correct: false },
+                    { text: "wonderful moment", correct: false }
+                ],
+                explanation: {
+                    translation: "Và bây giờ là khoảnh khắc quyết định: ai là nhà vô địch của năm nay?",
+                    optionsDict: [
+                        "A. first moment (khoảnh khắc đầu tiên)",
+                        "B. decisive moment (thời khắc quyết định / sự thật hé lộ)",
+                        "C. memorable moment (khoảnh khắc đáng nhớ)",
+                        "D. wonderful moment (khoảnh khắc tuyệt vời)"
+                    ],
+                    whyCorrect: "Thành ngữ: `the moment of truth = decisive moment` (thời điểm quyết định kết quả/hé lộ sự thật).",
+                    whyIncorrect: "A, C, D không mang nét nghĩa thời khắc quyết định."
+                }
+            },
+            {
+                type: "SYNONYM",
+                question: "40. The injury may keep him out of football <b>for good</b>.",
+                options: [
+                    { text: "for ever", correct: true },
+                    { text: "for ages", correct: false },
+                    { text: "for hours", correct: false },
+                    { text: "for now", correct: false }
+                ],
+                explanation: {
+                    translation: "Chấn thương này có thể khiến anh ấy phải rời xa bóng đá vĩnh viễn.",
+                    optionsDict: [
+                        "A. for ever (vĩnh viễn / mãi mãi)",
+                        "B. for ages (đã lâu lắm rồi)",
+                        "C. for hours (trong nhiều giờ)",
+                        "D. for now (tạm thời bây giờ)"
+                    ],
+                    whyCorrect: "Từ đồng nghĩa: `for good = for ever` (mãi mãi, vĩnh viễn).",
+                    whyIncorrect: "B, C, D không mang nghĩa vĩnh viễn."
+                }
+            },
+            {
+                type: "SYNONYM",
+                question: "41. Candidates begin filing to <b>run for office</b> next Monday.",
+                options: [
+                    { text: "stand around", correct: false },
+                    { text: "stand out", correct: false },
+                    { text: "stand down", correct: false },
+                    { text: "stand for", correct: true }
+                ],
+                explanation: {
+                    translation: "Các ứng cử viên bắt đầu nộp hồ sơ ra tranh cử chức vụ vào Thứ Hai tuần tới.",
+                    optionsDict: [
+                        "A. stand around (đứng quanh)",
+                        "B. stand out (nổi bật)",
+                        "C. stand down (từ chức)",
+                        "D. stand for (stand for office/election = ra tranh cử)"
+                    ],
+                    whyCorrect: "Cụm đồng nghĩa: `run for office = stand for election/office` (ra tranh cử).",
+                    whyIncorrect: "A, B, C không mang nghĩa ra tranh cử."
+                }
+            },
+
+            // WORD FORMATIONS
+            {
+                type: "WORD FORMATIONS",
+                question: "42. Stephen Chase had determined to live up to the ________ of the Company. (EXPECT)",
+                options: [
+                    { text: "expectant", correct: false },
+                    { text: "expected", correct: false },
+                    { text: "expectation", correct: true },
+                    { text: "expect", correct: false }
+                ],
+                explanation: {
+                    translation: "Stephen Chase đã quyết tâm đáp ứng sự kỳ vọng của Công ty.",
+                    optionsDict: [
+                        "A. expectant (adj)",
+                        "B. expected (adj)",
+                        "C. expectation (n: live up to expectations = đáp ứng sự kỳ vọng)",
+                        "D. expect (v)"
+                    ],
+                    whyCorrect: "Cụm từ cố định: `live up to the expectations` (đáp ứng kỳ vọng của ai).",
+                    whyIncorrect: "A, B, D sai từ loại đi sau 'the'."
+                }
+            },
+            {
+                type: "WORD FORMATIONS",
+                question: "43. Many lines from Shakespeare's plays are misquoted and ________. (APPLY)",
+                options: [
+                    { text: "applicable", correct: false },
+                    { text: "misapplied", correct: true },
+                    { text: "application", correct: false },
+                    { text: "applied", correct: false }
+                ],
+                explanation: {
+                    translation: "Nhiều câu thoại trong các vở kịch của Shakespeare bị trích dẫn sai và bị áp dụng sai bối cảnh.",
+                    optionsDict: [
+                        "A. applicable (adj: có thể áp dụng)",
+                        "B. misapplied (v-ed: bị áp dụng sai bối cảnh)",
+                        "C. application (n: sự ứng dụng)",
+                        "D. applied (v-ed: được áp dụng)"
+                    ],
+                    whyCorrect: "Cấu trúc song hành câu bị động nối bằng 'and': `misquoted and misapplied` (trích dẫn sai và dùng sai bối cảnh).",
+                    whyIncorrect: "A, C sai từ loại; D mang nghĩa tích cực không khớp tiền tố 'mis-' câu trước."
+                }
+            },
+            {
+                type: "WORD FORMATIONS",
+                question: "44. You look exhausted - I hope that they won't ________ you. (WORK)",
+                options: [
+                    { text: "working", correct: false },
+                    { text: "rework", correct: false },
+                    { text: "overworked", correct: false },
+                    { text: "overwork", correct: true }
+                ],
+                explanation: {
+                    translation: "Trông bạn kiệt sức rồi - Tôi hy vọng họ sẽ không bắt bạn làm việc quá sức.",
+                    optionsDict: [
+                        "A. working (V-ing)",
+                        "B. rework (v: làm lại)",
+                        "C. overworked (V-ed)",
+                        "D. overwork (v: overwork sb = bắt ai làm việc quá sức)"
+                    ],
+                    whyCorrect: "Đứng sau trợ động từ 'won't' cần Động từ nguyên mẫu `overwork` (bắt làm việc quá tải).",
+                    whyIncorrect: "A, C sai hình thái động từ; B làm lại không hợp ngữ cảnh kiệt sức."
+                }
+            },
+
+            // ANTONYM
+            {
+                type: "ANTONYM",
+                question: "45. The wind is whistling up this and <b>within seconds</b> my face is frozen.",
+                options: [
+                    { text: "quickly", correct: false },
+                    { text: "extremely", correct: false },
+                    { text: "definitely", correct: false },
+                    { text: "slowly", correct: true }
+                ],
+                explanation: {
+                    translation: "Gió rít liên hồi và chỉ trong vài giây mặt tôi đã đóng băng.",
+                    optionsDict: [
+                        "A. quickly (nhanh chóng)",
+                        "B. extremely (cực kỳ)",
+                        "C. definitely (chắc chắn)",
+                        "D. slowly (adv: một cách chậm chạp)"
+                    ],
+                    whyCorrect: "Từ trái nghĩa: `within seconds` (chỉ trong vài giây / cực nhanh) >< `slowly` (chậm chạp).",
+                    whyIncorrect: "A là từ đồng nghĩa."
+                }
+            },
+            {
+                type: "ANTONYM",
+                question: "46. My sister lives in Alaska, so I only see her <b>once in a blue moon</b>.",
+                options: [
+                    { text: "frequently", correct: true },
+                    { text: "rarely", correct: false },
+                    { text: "perfectly", correct: false },
+                    { text: "remarkably", correct: false }
+                ],
+                explanation: {
+                    translation: "Chị gái tôi sống ở Alaska, nên tôi rất hiếm khi mới gặp chị ấy.",
+                    optionsDict: [
+                        "A. frequently (adv: thường xuyên)",
+                        "B. rarely (hiếm khi)",
+                        "C. perfectly (hoàn hảo)",
+                        "D. remarkably (đáng chú ý)"
+                    ],
+                    whyCorrect: "Từ trái nghĩa: `once in a blue moon` (rất hiếm khi) >< `frequently` (thường xuyên).",
+                    whyIncorrect: "B là từ đồng nghĩa."
+                }
+            },
+            {
+                type: "ANTONYM",
+                question: "47. When he goes on holiday, it takes him the first couple of days just to <b>wind down</b>.",
+                options: [
+                    { text: "stress out", correct: true },
+                    { text: "chill out", correct: false },
+                    { text: "put out", correct: false },
+                    { text: "pass out", correct: false }
+                ],
+                explanation: {
+                    translation: "Khi anh ấy đi nghỉ mát, anh ấy mất hai ngày đầu tiên chỉ để thư giãn đầu óc.",
+                    optionsDict: [
+                        "A. stress out (v: bị căng thẳng / mệt mỏi)",
+                        "B. chill out (thư giãn)",
+                        "C. put out (dập tắt)",
+                        "D. pass out (ngất xỉu)"
+                    ],
+                    whyCorrect: "Từ trái nghĩa: `wind down` (thư giãn nghỉ ngơi) >< `stress out` (bị căng thẳng áp lực).",
+                    whyIncorrect: "B là từ đồng nghĩa; C, D không mang nghĩa căng thẳng."
+                }
+            },
+            {
+                type: "ANTONYM",
+                question: "48. They acknowledge that juries make mistakes <b>from time to time</b>.",
+                options: [
+                    { text: "now and then", correct: false },
+                    { text: "all the time", correct: true },
+                    { text: "by the time", correct: false },
+                    { text: "time after time", correct: false }
+                ],
+                explanation: {
+                    translation: "Họ thừa nhận rằng bồi thẩm đoàn thỉnh thoảng vẫn mắc sai lầm.",
+                    optionsDict: [
+                        "A. now and then (thỉnh thoảng)",
+                        "B. all the time (mọi lúc / luôn luôn)",
+                        "C. by the time (vào lúc)",
+                        "D. time after time (lặp đi lặp lại)"
+                    ],
+                    whyCorrect: "Từ trái nghĩa: `from time to time` (thỉnh thoảng) >< `all the time` (luôn luôn, mọi lúc).",
+                    whyIncorrect: "A là từ đồng nghĩa."
+                }
+            },
+            {
+                type: "ANTONYM",
+                question: "49. Sandy was on the Internet <b>just now</b>, that's why the phone was busy.",
+                options: [
+                    { text: "at times", correct: false },
+                    { text: "a long time ago", correct: true },
+                    { text: "for now", correct: false },
+                    { text: "any moment now", correct: false }
+                ],
+                explanation: {
+                    translation: "Sandy vừa mới lên mạng lúc nãy xong, đó là lý do tại sao máy bận.",
+                    optionsDict: [
+                        "A. at times (thỉnh thoảng)",
+                        "B. a long time ago (cách đây rất lâu)",
+                        "C. for now (tạm thời)",
+                        "D. any moment now (bất cứ lúc nào tới đây)"
+                    ],
+                    whyCorrect: "Từ trái nghĩa: `just now` (vừa mới đây thôi) >< `a long time ago` (cách đây rất lâu).",
+                    whyIncorrect: "A, C, D không đối lập nghĩa thời gian vừa mới xảy ra."
+                }
+            },
+            {
+                type: "ANTONYM",
+                question: "50. I realize that I need to <b>work my way through</b> the next passages with care and delicacy.",
+                options: [
+                    { text: "give over", correct: false },
+                    { text: "give off", correct: false },
+                    { text: "give out", correct: false },
+                    { text: "give up", correct: true }
+                ],
+                explanation: {
+                    translation: "Tôi nhận ra mình cần phải kiên trì đọc qua hết các đoạn văn tiếp theo một cách cẩn thận và tinh tế.",
+                    optionsDict: [
+                        "A. give over (ngừng lại)",
+                        "B. give off (tỏa ra mùi)",
+                        "C. give out (cạn kệt/phát tài liệu)",
+                        "D. give up (v: bỏ cuộc / đầu hàng)"
+                    ],
+                    whyCorrect: "Từ trái nghĩa: `work my way through` (kiên trì làm lần lượt từ đầu đến cuối) >< `give up` (bỏ cuộc giữ chừng).",
+                    whyIncorrect: "A, B, C không mang nét nghĩa từ bỏ sự kiên trì."
+                }
+            }
+        ];
+
+        let questions = [];
+
+        function shuffleArray(array) {
+            let cur = array.slice();
+            for (let i = cur.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [cur[i], cur[j]] = [cur[j], cur[i]];
+            }
+            return cur;
+        }
+
+        function initQuiz() {
+            questions = rawQuestions.map(q => {
+                let shuffledOpts = shuffleArray(q.options);
+                return {
+                    ...q,
+                    shuffledOptions: shuffledOpts,
+                    userAnswerIndex: null
+                };
+            });
+            renderQuiz();
+        }
+
+        function renderQuiz() {
+            const container = document.getElementById('quiz-container');
+            container.innerHTML = '';
+
+            questions.forEach((q, idx) => {
+                const card = document.createElement('div');
+                card.className = 'question-card';
+
+                const optionsHTML = q.shuffledOptions.map((opt, optIdx) => {
+                    const letters = ['A', 'B', 'C', 'D'];
+                    return `
+                        <button class="opt-btn" id="opt-${idx}-${optIdx}" onclick="selectAnswer(${idx}, ${optIdx})">
+                            <span class="opt-prefix">${letters[optIdx]}</span>
+                            <span>${opt.text}</span>
+                        </button>
+                    `;
+                }).join('');
+
+                const exp = q.explanation;
+                const expDictHTML = exp.optionsDict.map(item => `<li>${item}</li>`).join('');
+
+                card.innerHTML = `
+                    <div class="q-header">
+                        <span class="q-number">Câu ${idx + 1} / ${questions.length}</span>
+                        <span class="q-type">${q.type}</span>
+                    </div>
+                    <div class="q-text">${q.question}</div>
+                    <div class="options-grid">
+                        ${optionsHTML}
+                    </div>
+                    <div class="explanation-box" id="exp-${idx}">
+                        <div class="exp-head">💡 GIẢI THÍCH CHI TIẾT TỪ MS LÊ HẰNG:</div>
+                        <div class="exp-section"><strong>1. Dịch câu hỏi:</strong> ${exp.translation}</div>
+                        <div class="exp-section">
+                            <strong>2. Phân tích 4 đáp án:</strong>
+                            <ul class="exp-list">${expDictHTML}</ul>
+                        </div>
+                        <div class="exp-section"><strong>3. Tại sao chọn đáp án này?</strong> ${exp.whyCorrect}</div>
+                        <div class="exp-section"><strong>4. Tại sao các đáp án khác sai?</strong> ${exp.whyIncorrect}</div>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+        }
+
+        function selectAnswer(qIdx, optIdx) {
+            const q = questions[qIdx];
+            if (q.userAnswerIndex !== null) return;
+
+            q.userAnswerIndex = optIdx;
+            const selectedOpt = q.shuffledOptions[optIdx];
+            const isCorrect = selectedOpt.correct;
+
+            const selectedBtn = document.getElementById(`opt-${qIdx}-${optIdx}`);
+
+            if (isCorrect) {
+                selectedBtn.classList.add('correct');
+                playSound('correct');
+                triggerConfetti();
+            } else {
+                selectedBtn.classList.add('wrong');
+                playSound('wrong');
+
+                q.shuffledOptions.forEach((o, i) => {
+                    if (o.correct) {
+                        document.getElementById(`opt-${qIdx}-${i}`).classList.add('correct');
+                    }
+                });
+            }
+
+            q.shuffledOptions.forEach((_, i) => {
+                const b = document.getElementById(`opt-${qIdx}-${i}`);
+                b.disabled = true;
+                b.style.cursor = 'default';
+            });
+
+            document.getElementById(`exp-${qIdx}`).classList.add('show');
+        }
+
+        function submitQuiz() {
+            let correctCount = 0;
+
+            questions.forEach(q => {
+                if (q.userAnswerIndex !== null && q.shuffledOptions[q.userAnswerIndex].correct) {
+                    correctCount++;
+                }
+            });
+
+            const total = questions.length;
+            const percentage = Math.round((correctCount / total) * 100);
+
+            document.getElementById('score-text').innerText = `${correctCount} / ${total} (${percentage}%)`;
+
+            let comment = "";
+            if (percentage < 50) {
+                comment = "Điểm lần này chưa cao lắm, con cố gắng đọc kỹ giải thích đáp án và làm lại nha. Cô tin con sẽ làm tốt hơn ở lần sau!";
+            } else if (percentage <= 80) {
+                comment = "Con đã có tiến bộ khá ổn rồi, con cố gắng đọc kỹ giải thích đáp án và làm lại nha. Cô tin con sẽ làm tốt hơn ở lần sau!";
+            } else {
+                comment = "Làm tốt lắm, con cố gắng rinh điểm 10 ở lần sau nha!";
+                triggerConfetti();
+            }
+
+            document.getElementById('comment-text').innerText = comment;
+            document.getElementById('result-modal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('result-modal').style.display = 'none';
+        }
+
+        function triggerConfetti() {
+            const canvas = document.getElementById('confetti-canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const particles = [];
+            const colors = ['#8854C0', '#FDCB6E', '#00C9A7', '#FF7675', '#6C5CE7', '#00D26A'];
+
+            for (let i = 0; i < 60; i++) {
+                particles.push({
+                    x: canvas.width / 2,
+                    y: canvas.height / 2,
+                    vx: (Math.random() - 0.5) * 14,
+                    vy: (Math.random() - 0.7) * 14,
+                    size: Math.random() * 8 + 4,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    life: 90
+                });
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                let alive = false;
+
+                particles.forEach(p => {
+                    if (p.life > 0) {
+                        alive = true;
+                        p.x += p.vx;
+                        p.y += p.vy;
+                        p.vy += 0.4;
+                        p.life -= 2;
+                        ctx.fillStyle = p.color;
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                        ctx.fill();
+                    }
+                });
+
+                if (alive) requestAnimationFrame(animate);
+                else ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }
+
+            animate();
+        }
+
+        window.onload = initQuiz;
+    </script>
+</body>
+</html>
